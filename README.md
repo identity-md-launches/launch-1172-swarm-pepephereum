@@ -2,6 +2,23 @@
 
 This repository includes the Swarm PEPEPHEREUM website, its ready-to-publish static export, the five previously delivered logo options, and the existing offline Foundry project. The website uses the assignment's supplied mascot image; a creator-selected `logo` in the live feed takes precedence. The earlier logo choices remain in [logos/README.md](logos/README.md).
 
+## Token launch: quick verification
+
+The launch deliverables are [`src/SPEPEToken.sol`](src/SPEPEToken.sol), [`launch.json`](launch.json), and the existing root [`foundry.toml`](foundry.toml). The constructor takes no arguments and mints all `1e27` minor units to the deploying factory. The fixed buy tax is 2%; transfers into PoolManager and wallet transfers are untaxed. Launch parameters and operator responsibilities are described under **Token behavior** and **Launch** below.
+
+Run the small smoke suite first, then the complete existing suite:
+
+```sh
+forge build
+forge test --match-contract SPEPELaunchSmokeTest
+forge test
+forge fmt --check
+```
+
+The three smoke tests cover CREATE2 deployment with distinct transaction origin and factory addresses, the full 10%/90% allocation followed by claim/buy/wallet/sell transfers, and rejection of spending the factory's balance without approval. They need no environment variables or network. Their PoolManager transfers exercise token accounting; the existing `SPEPEPoolTest` separately exercises actual local v4 settlement and swaps.
+
+The bounded launch recheck passed with Foundry 1.8.3 and Solidity 0.8.26: all three smoke tests and all 24 offline tests passed; the optional live fork skipped. Build and formatting checks passed. The manifest's exact key sets, values and JSON types match the assignment, the documented ABI matches the compiler output, and token bytecode has no unresolved library links. The accepted token implementation, manifest, build configuration and dependencies needed no changes. Live-state fork verification remains the launch operator's responsibility as described below.
+
 ## Website: install and preview
 
 The site is plain HTML, CSS and JavaScript in [`site/`](site/index.html). It needs **no dependency installation, bundler or build step** to run. Fonts, panel artwork and the default logo are local assets. Serve the folder over HTTP so JavaScript modules load:
@@ -47,7 +64,7 @@ The production copy and strict JavaScript typecheck passed. The Playwright inter
 
 The six-domain design review, fixes, actual contrast measurements, screenshots and limits are in [docs/site-validation.md](docs/site-validation.md). [DESIGN.md](DESIGN.md) documents the final design system. Axe reported no WCAG A/AA violations at 1440, 390 and 320 px, but could not determine contrast through decorative pseudo-elements; the flat text/background pairs were measured separately. No native screen-reader, physical-device, Safari/Firefox or native browser zoom session was performed. The production feed and trading execution were not tested live.
 
-The required Foundry checks passed: **21 tests passed, 0 failed, 1 optional fork test skipped**. See the existing token verification details below. The live-state fork remains outstanding.
+The latest required Foundry checks passed: **24 tests passed, 0 failed, 1 optional fork test skipped**. See the token verification details below. The live-state fork remains outstanding.
 
 The check runner recreates `test/scratch/` after cleanup. `check.mjs review` overwrites the two compact WebP screenshots and measured contrast record in `docs/site-review/`. Raw logs and detailed automation results stay in scratch; review conclusions are retained in the documentation.
 
