@@ -1,0 +1,141 @@
+{
+  "text": [
+    {
+      "foreground": "rgb(83, 86, 77)",
+      "background": "rgb(201, 197, 184)",
+      "ratio": 4.33,
+      "examples": [
+        "copy"
+      ]
+    },
+    {
+      "foreground": "rgb(83, 86, 77)",
+      "background": "rgb(217, 214, 204)",
+      "ratio": 5.15,
+      "examples": [
+        "SPAN",
+        "SPAN",
+        "SPAN",
+        "P",
+        "how-chain"
+      ]
+    },
+    {
+      "foreground": "rgb(116, 65, 23)",
+      "background": "rgb(217, 214, 204)",
+      "ratio": 5.75,
+      "examples": [
+        "SPAN",
+        "SPAN",
+        "SPAN",
+        "module-number",
+        "module-number"
+      ]
+    },
+    {
+      "foreground": "rgb(203, 142, 80)",
+      "background": "rgb(20, 28, 22)",
+      "ratio": 6.23,
+      "examples": [
+        "status"
+      ]
+    },
+    {
+      "foreground": "rgb(203, 142, 80)",
+      "background": "rgb(12, 16, 13)",
+      "ratio": 6.87,
+      "examples": [
+        "copper",
+        "eyebrow"
+      ]
+    },
+    {
+      "foreground": "rgb(163, 181, 164)",
+      "background": "rgb(20, 28, 22)",
+      "ratio": 8.04,
+      "examples": [
+        "chart",
+        "terminal-tags"
+      ]
+    },
+    {
+      "foreground": "rgb(163, 181, 164)",
+      "background": "rgb(12, 16, 13)",
+      "ratio": 8.86,
+      "examples": [
+        "terminal-label",
+        "chain",
+        "SPAN",
+        "description",
+        "description-chain"
+      ]
+    },
+    {
+      "foreground": "rgb(233, 239, 230)",
+      "background": "rgb(20, 60, 34)",
+      "ratio": 10.57,
+      "examples": [
+        "buy-label"
+      ]
+    },
+    {
+      "foreground": "rgb(25, 28, 24)",
+      "background": "rgb(217, 214, 204)",
+      "ratio": 11.83,
+      "examples": [
+        "B",
+        "brand-sub",
+        "A",
+        "A",
+        "A"
+      ]
+    },
+    {
+      "foreground": "rgb(60, 255, 122)",
+      "background": "rgb(12, 16, 13)",
+      "ratio": 14.4,
+      "examples": [
+        "skip-link",
+        "ticker",
+        "SPAN",
+        "SPAN",
+        "SPAN"
+      ]
+    },
+    {
+      "foreground": "rgb(233, 239, 230)",
+      "background": "rgb(20, 28, 22)",
+      "ratio": 14.87,
+      "examples": [
+        "P"
+      ]
+    },
+    {
+      "foreground": "rgb(233, 239, 230)",
+      "background": "rgb(12, 16, 13)",
+      "ratio": 16.39,
+      "examples": [
+        "name",
+        "SPAN"
+      ]
+    }
+  ],
+  "focusAndActiveButton": [
+    {
+      "foreground": "--focus",
+      "background": "--panel",
+      "ratio": 4.79
+    },
+    {
+      "foreground": "--signal",
+      "background": "--screen",
+      "ratio": 14.4
+    },
+    {
+      "foreground": "--screen",
+      "background": "--signal",
+      "ratio": 14.4
+    }
+  ],
+  "method": "WCAG sRGB relative luminance from computed text colors and nearest opaque ancestor background. Review screenshots to confirm decorative pseudo-elements do not cover text. Inactive controls are identified separately."
+}

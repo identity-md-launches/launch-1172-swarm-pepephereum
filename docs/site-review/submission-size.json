@@ -1,0 +1,17 @@
+{
+  "method": "git bundle create --all in an isolated temporary clone, including the two earlier commits and all explicit delivery paths",
+  "measuredBundleBytesBeforeThisRecord": 7751818,
+  "recordReserveBytes": 4096,
+  "completeSubmissionUpperBoundBytes": 7755914,
+  "limitBytes": 8388608,
+  "headroomAfterReserveBytes": 632694,
+  "productionExportBytes": 326274,
+  "allFiveExistingLogosPreserved": true,
+  "excludedGeneratedPaths": [
+    "test/scratch/",
+    ".playwright-mcp/",
+    "out/",
+    "cache/"
+  ],
+  "notes": "This record is added after the measurement; its 4 KiB reserve is larger than the entire uncompressed record. A second full-bundle check including the record is performed before finishing. The actual upload bundle is produced by the submission system."
+}

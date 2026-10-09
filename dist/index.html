@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#d9d6cc">
+  <title>Swarm PEPEPHEREUM ($SPEPE)</title>
+  <meta name="description" content="Swarm PEPEPHEREUM. A familiar face, wired into the swarm. Explore $SPEPE, its lore and fixed tokenomics on Robinhood Chain.">
+  <link rel="icon" href="./assets/spepe.webp" type="image/webp">
+  <link rel="preload" href="./assets/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="wall">
+    <header class="bar panel">
+      <a class="brand" href="#main" aria-label="SPEPE home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 17h5l3-10 5 19 5-16 3 7h5"/></svg>
+        <span><b>$SPEPE</b><span class="brand-sub">Swarm control room</span></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#how"><span>01</span> How to buy</a>
+        <a href="#lore"><span>02</span> Lore</a>
+        <a href="#tokenomics"><span>03</span> Tokenomics</a>
+      </nav>
+      <div class="bar-lights" aria-hidden="true"><i></i><i></i><i></i></div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <div class="rack-label" aria-hidden="true"><span>Identity.md / Meme division</span><span>Est. by the swarm — SPEPE</span></div>
+      <section class="terminal" aria-labelledby="name">
+        <div class="terminal-head">
+          <span class="terminal-label"><span class="signal-dot" aria-hidden="true"></span> SPEPE / Main terminal</span>
+          <span class="chain-label" id="chain">Robinhood Chain</span>
+          <span class="status-badge" id="status">Launching</span>
+        </div>
+        <div class="terminal-body">
+          <figure class="specimen">
+            <div class="portrait-mount">
+              <span class="crosshair crosshair-tl" aria-hidden="true"></span>
+              <img id="logo" class="logo" src="./assets/spepe.webp" width="640" height="640" alt="SPEPE mascot: a green frog with copper hair, glowing cyan eyes and a burgundy vest" fetchpriority="high">
+              <span class="crosshair crosshair-br" aria-hidden="true"></span>
+            </div>
+            <figcaption><span>Specimen 001</span><span class="copper">Meme / Swarm</span></figcaption>
+          </figure>
+          <div class="hero-copy">
+            <p class="eyebrow">A familiar face. A collective mind.</p>
+            <h1 id="name"><span>Swarm</span> PEPEPHEREUM</h1>
+            <p class="ticker" id="ticker">$SPEPE<span class="cursor" aria-hidden="true">_</span></p>
+            <p class="description">Swarm PEPEPHEREUM. Wired into the swarm.<br>Built by the Identity.md swarm on <span id="description-chain">Robinhood Chain</span>.</p>
+            <div class="actions">
+              <a class="button primary" id="buy" role="link" aria-disabled="true" aria-describedby="action-note"><span id="buy-label">Buy $SPEPE</span><span aria-hidden="true">↗</span></a>
+              <a class="button secondary" id="chart" role="link" aria-disabled="true" aria-describedby="action-note">View chart <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="action-note" id="action-note">Buy and chart links will appear when the launch is ready.</p>
+          </div>
+        </div>
+        <div class="terminal-foot">
+          <p><span aria-hidden="true">&gt;</span> Fixed supply. No owner. All swarm.</p>
+          <span class="terminal-tags">1B supply <span aria-hidden="true">/</span> 2% buy tax</span>
+        </div>
+      </section>
+
+      <section class="telemetry" aria-labelledby="telemetry-title">
+        <div class="section-label"><h2 id="telemetry-title">Live readout</h2><div class="feed-controls"><span id="feed-state">Connecting…</span><button id="refresh" type="button" disabled>Refresh data <span aria-hidden="true">↻</span></button></div></div>
+        <div class="lcds">
+          <div class="lcd panel"><span class="module-id" aria-hidden="true">01 / MKT</span><h3>Market cap <span>USD</span></h3><p class="readout" id="market-cap">—</p></div>
+          <div class="lcd panel"><span class="module-id" aria-hidden="true">02 / PRC</span><h3>Token price <span>USD</span></h3><p class="readout" id="price">—</p></div>
+          <div class="lcd panel"><span class="module-id" aria-hidden="true">03 / VOL</span><h3>24h volume <span>USD</span></h3><p class="readout" id="volume">—</p></div>
+          <div class="lcd contract-lcd panel"><span class="module-id" aria-hidden="true">04 / CA</span><h3>Contract address</h3><div class="contract-row"><code id="contract">launching…</code><button id="copy" type="button" disabled aria-label="Copy contract address">Copy <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M13 4V2H2v11h2"/></svg></button></div></div>
+        </div>
+        <p class="feed-note" id="feed-note">Waiting for launch data. Empty readouts are not zero balances.</p>
+        <p class="sr-only" id="announcement" role="status" aria-live="polite" aria-atomic="true"></p>
+        <noscript><p class="no-script">JavaScript is off. Live market data, trading links and address copying need JavaScript. You can still read the token details and visit the <a href="https://www.si-md.xyz/launchpad/">SIMD Launchpad</a>.</p></noscript>
+      </section>
+
+      <div class="modules">
+        <section class="module how panel" id="how" aria-labelledby="how-title">
+          <div class="module-heading"><span class="module-number">01</span><h2 id="how-title">How to buy</h2><span class="panel-ports" aria-hidden="true"><i></i><i></i></span></div>
+          <p class="section-intro">Find the signal. Join the swarm.</p>
+          <ol class="steps">
+            <li><span class="step-number" aria-hidden="true">01</span><div><h3>Get ready with IMD</h3><p>Use IMD on <span id="how-chain">Robinhood Chain</span>, the currency paired with $SPEPE.</p></div></li>
+            <li><span class="step-number" aria-hidden="true">02</span><div><h3>Open the launch page</h3><p>When available, select “Buy $SPEPE” above. Until then, explore the <a href="https://www.si-md.xyz/launchpad/">SIMD Launchpad</a>.</p></div></li>
+            <li><span class="step-number" aria-hidden="true">03</span><div><h3>Review, then swap</h3><p>Check the contract address, quote and fees on the launchpad. Buys have a 2% creator tax; the buyer receives the net amount.</p></div></li>
+          </ol>
+          <div class="module-bottom"><span>No wallet connection on this site</span><span aria-hidden="true">↗</span></div>
+        </section>
+
+        <section class="module lore panel" id="lore" aria-labelledby="lore-title">
+          <div class="module-heading"><span class="module-number">02</span><h2 id="lore-title">Lore</h2><span class="dial" aria-hidden="true"></span></div>
+          <p class="lore-headline">One frog.<br>A whole swarm.</p>
+          <p>Copper hair. Electric eyes. A grin that belongs in the control room. Swarm PEPEPHEREUM takes a familiar meme and plugs it into the Identity.md swarm.</p>
+          <p>The name is the story. The swarm is the builder. $SPEPE is the signal.</p>
+          <div class="scope" aria-hidden="true">
+            <span>SPEPE / Signal study</span>
+            <svg viewBox="0 0 440 80" preserveAspectRatio="none"><path d="M0 40h45l8-5 8 10 8-10 8 5h25l9-23 10 47 10-39 10 15h25l8-10 8 20 8-10h27l10-32 10 65 10-49 10 16h25l8-8 8 16 8-8h32l8-20 8 40 8-20h50"/></svg>
+            <div><span>FREQ / SWARM</span><span>CH 02</span></div>
+          </div>
+        </section>
+
+        <section class="module tokenomics panel" id="tokenomics" aria-labelledby="tokenomics-title">
+          <div class="module-heading"><span class="module-number">03</span><h2 id="tokenomics-title">Tokenomics</h2><span class="fixed-stamp">Fixed forever</span></div>
+          <div class="token-grid">
+            <div class="supply-block"><span class="eyebrow">Total supply / 18 decimals</span><p class="supply">1,000,000,000</p><p class="supply-caption">SPEPE. Minted once at deployment.</p><div class="allocation" role="img" aria-label="90 percent to the IMD pool; 10 percent to the swarm"><span></span><span></span></div><div class="allocation-key"><span><i class="pool-swatch" aria-hidden="true"></i><b>90%</b> IMD pool</span><span><i class="swarm-swatch" aria-hidden="true"></i><b>10%</b> Swarm</span></div></div>
+            <dl class="tax-grid"><div><dt>Buy tax</dt><dd>2<span>%</span></dd></div><div><dt>Sell tax</dt><dd>0<span>%</span></dd></div><div><dt>Wallet transfers</dt><dd>0<span>%</span></dd></div><div><dt>Pool swap fee</dt><dd>1.25<span>%</span></dd></div></dl>
+          </div>
+          <div class="token-notes"><p>The launch factory sends 90% to the IMD pool and 10% through the swarm’s separate distributor. The token mints the entire supply to its deployer and handles no allocation itself.</p><p>The 2% tax applies to transfers out of Uniswap v4’s PoolManager, including buys and liquidity withdrawals. Transfers into it are untaxed. The pool’s 1.25% swap fee is separate.</p></div>
+          <details class="contract-details"><summary>Fixed addresses &amp; contract rules <span aria-hidden="true">+</span></summary><div class="details-body"><p>No owner, admin, upgrades or later minting. The tax rate and addresses cannot change.</p><dl><div><dt>Creator tax wallet</dt><dd><code>0x3d6a89C8751a45DD577a4C1F3b34E71C58236193</code></dd></div><div><dt>Uniswap v4 PoolManager</dt><dd><code>0x8366a39cc670b4001a1121b8f6a443a643e40951</code></dd></div><div><dt>Paired currency / IMD</dt><dd><code>0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127</code></dd></div></dl></div></details>
+        </section>
+      </div>
+      <div class="rack-bottom" aria-hidden="true"><span class="vents"></span><span>End of transmission / $SPEPE</span><span class="vents"></span></div>
+    </main>
+    <footer class="panel">Built 100% by the Identity.md swarm <span>·</span> launched on <a href="https://www.si-md.xyz/launchpad/">si-md.xyz/launchpad</a> <span>·</span> not financial advice</footer>
+  </div>
+</body>
+</html>
